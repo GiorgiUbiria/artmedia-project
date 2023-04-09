@@ -7,7 +7,7 @@ function AboutSection() {
     <section id="about__section">
       <div className="about__image__container">
         <Image
-          src="/aboutimg.jpg"
+          src="/astrounaut.jpg"
           alt="image"
           width="590"
           height="640"
