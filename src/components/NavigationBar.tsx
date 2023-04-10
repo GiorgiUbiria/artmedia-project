@@ -25,6 +25,7 @@ function NavigationBar() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={styles.icon}
+        aria-label="Company logo"
       >
         <path
           d="M13.4949 9.17684H58.8308V45.8766H9.17682V13.4949C9.17682 11.1112 11.1112 9.17684 13.4949 9.17684Z"
@@ -59,24 +60,36 @@ function NavigationBar() {
           fill="#2B3252"
         />
       </svg>
-      <nav className={`${styles.links} ${isOpen ? styles.visible__links : ""}`}>
-        <Link href="/" className={montserrat.className}>
+      <nav
+        className={`${styles.links} ${isOpen ? styles.visible__links : ""}`}
+        role="navigation"
+        aria-label="Main Navigation"
+      >
+        <Link href="/" className={montserrat.className} title="Home">
           Home
         </Link>
-        <Link href="/services" className={montserrat.className}>
+        <Link
+          href="/services"
+          className={montserrat.className}
+          title="Services"
+        >
           Services
         </Link>
-        <Link href="/projects" className={montserrat.className}>
+        <Link
+          href="/projects"
+          className={montserrat.className}
+          title="Projects"
+        >
           Projects
         </Link>
-        <Link href="/about" className={montserrat.className}>
+        <Link href="/about" className={montserrat.className} title="About">
           About
         </Link>
-        <Link href="/contact" className={montserrat.className}>
+        <Link href="/contact" className={montserrat.className} title="Contact">
           Contact
         </Link>
       </nav>
-      <section style={{}}>
+      <section>
         <input
           type="text"
           placeholder="search keyword..."
@@ -91,6 +104,7 @@ function NavigationBar() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className={styles.search__icon}
+          aria-label="search icon"
         >
           <path
             d="M13.0006 6.49905C13.0006 7.93321 12.535 9.25802 11.7506 10.3329L15.707 14.2917C16.0977 14.6822 16.0977 15.3165 15.707 15.7071C15.3164 16.0976 14.682 16.0976 14.2913 15.7071L10.3349 11.7483C9.25983 12.5357 7.93476 12.9981 6.50032 12.9981C2.90952 12.9981 0 10.0891 0 6.49905C0 2.90895 2.90952 0 6.50032 0C10.0911 0 13.0006 2.90895 13.0006 6.49905ZM6.50032 10.9984C7.09129 10.9984 7.67649 10.882 8.22248 10.6559C8.76847 10.4298 9.26457 10.0984 9.68245 9.68056C10.1003 9.26276 10.4318 8.76676 10.658 8.22087C10.8841 7.67499 11.0005 7.08991 11.0005 6.49905C11.0005 5.90819 10.8841 5.32311 10.658 4.77722C10.4318 4.23134 10.1003 3.73534 9.68245 3.31753C9.26457 2.89973 8.76847 2.56831 8.22248 2.3422C7.67649 2.11609 7.09129 1.99971 6.50032 1.99971C5.90934 1.99971 5.32415 2.11609 4.77816 2.3422C4.23217 2.56831 3.73607 2.89973 3.31818 3.31753C2.9003 3.73534 2.56881 4.23134 2.34266 4.77722C2.1165 5.32311 2.0001 5.90819 2.0001 6.49905C2.0001 7.08991 2.1165 7.67499 2.34266 8.22087C2.56881 8.76676 2.9003 9.26276 3.31818 9.68056C3.73607 10.0984 4.23217 10.4298 4.77816 10.6559C5.32415 10.882 5.90934 10.9984 6.50032 10.9984Z"
@@ -101,6 +115,10 @@ function NavigationBar() {
       <section
         className={`${styles.container} ${isOpen ? styles.change : ""}`}
         onClick={toggleMenu}
+        aria-hidden={!isOpen}
+        aria-controls="menu"
+        role="menubar"
+        aria-label="Main Navigation"
       >
         <div className={styles.bar1}></div>
         <div className={styles.bar2}></div>

@@ -9,19 +9,20 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 function ImageSection() {
   return (
-    <section id={styles.image__section}>
-      <div className={styles.image__container}>
+    <section id="image__section">
+      <article className={styles.image__container}>
         <Image
           src="/imagejpg.jpg"
-          alt="image"
+          alt="main image"
           width="1700"
           height="780"
           className={styles.image}
-        ></Image>
+          aria-labelledby="image-heading"
+        />
         <div className={styles.image__box}></div>
-      </div>
-      <div className={styles.image__text__container}>
-        <div className={styles.image__text}>
+      </article>
+      <article className={styles.image__text__container}>
+        <header className={styles.image__text}>
           <h1 className={montserrat.className}>
             Company&apos;s First Service Title
           </h1>
@@ -30,9 +31,15 @@ function ImageSection() {
             ducimus, repellendus ab, quo assumenda cumque, id facere eius illo
             sit doloremque? Omnis debitis aut molestiae temporibus.
           </p>
-          <button className={montserrat.className}>Learn More</button>
-        </div>
-      </div>
+          <button
+            className={montserrat.className}
+            aria-label="A description of the image"
+            type="button"
+          >
+            Learn More
+          </button>
+        </header>
+      </article>
     </section>
   );
 }

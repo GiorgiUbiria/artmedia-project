@@ -21,7 +21,7 @@ function NewsSection() {
     );
   };
   return (
-    <section id={styles.news__section}>
+    <section id="news__section">
       <header className={styles.news__head}>
         <h3 className={styles.news__header}> News</h3>
         <section className={styles.buttons}>

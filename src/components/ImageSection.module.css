@@ -1,17 +1,9 @@
-#image__section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 95%;
-}
-
 .image__container {
-  max-width: 100%;
+  width: 100%;
 }
 
 .image {
-  max-width: 100%;
+  width: 100%;
   height: 48.75rem;
   object-fit: cover;
   position: relative;
@@ -30,7 +22,7 @@
 }
 
 .image__text__container {
-  width: 90%;
+  width: 60%;
   height: 48.75rem;
   position: absolute;
   top: 25.75rem;
@@ -40,7 +32,7 @@
 .image__text {
   font-weight: 700;
   color: var(--white);
-  width: 40%;
+  width: 60%;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -71,12 +63,6 @@
 }
 
 @media only screen and (max-width: 1312px) {
-  #image__section {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
   .image__container {
     width: 100%;
   }
@@ -84,15 +70,13 @@
   .image {
     width: 100%;
     height: auto;
-    object-fit: cover;
-    position: relative;
-    top: 2.5rem;
+    top: 0;
   }
 
   .image__box {
     width: 98%;
     left: 1%;
-    bottom: 3.125rem;
+    bottom: 5.125rem;
   }
 
   .image__text__container {
@@ -105,13 +89,13 @@
   }
 
   .image__text {
-    width: 40%;
+    width: 50%;
     height: 100%;
   }
 
   .image__text h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
+    font-size: 3.25rem;
+    line-height: 1.4;
   }
 
   .image__text p {
@@ -119,71 +103,39 @@
   }
 
   .image__text button {
-    width: 50%;
+    width: 33.3%;
     height: auto;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 1000px) {
-  #image__section {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .image__container {
-    width: 100%;
-  }
-
-  .image {
-    width: 100%;
-    height: auto;
-  }
-
-  .image__box {
-    width: 98%;
-    height: 6.25rem;
-    left: 1%;
-    z-index: -1;
-    bottom: 3.25rem;
-  }
-
-  .image__text__container {
-    width: 100%;
-    height: 50%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-  }
-
   .image__text {
     width: 90%;
     height: 100%;
   }
 
   .image__text h1 {
-    font-size: 2.125rem;
+    font-size: 2.75rem;
   }
 
   .image__text p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 
   .image__text button {
-    font-size: 0.875rem;
+    font-size: 1.25rem;
     width: 25%;
   }
 }
 
-@media only screen and (max-width: 666px) {
+@media only screen and (max-width: 780px) {
   .image__text__container {
-    width: 100%;
-    height: 70%;
-    position: absolute;
     top: 40%;
   }
+}
 
+@media only screen and (max-width: 666px) {
   .image__text h1 {
     font-size: 2rem;
     text-transform: uppercase;
@@ -195,15 +147,10 @@
 
   .image__text button {
     font-size: 0.875rem;
-    width: 25%;
   }
 }
 
 @media only screen and (max-width: 572px) {
-  .image__text__container {
-    top: 40%;
-  }
-
   .image__text h1 {
     font-size: 1.875rem;
     text-transform: uppercase;
@@ -216,6 +163,12 @@
   .image__text button {
     font-size: 0.725rem;
     width: 25%;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .image__text__container {
+    top: 35%;
   }
 }
 
@@ -236,14 +189,6 @@
 }
 
 @media only screen and (max-width: 420px) {
-  .image {
-    object-fit: cover;
-  }
-
-  .image__text__container {
-    top: 40%;
-  }
-
   .image__text h1 {
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -260,10 +205,6 @@
 }
 
 @media only screen and (max-width: 366px) {
-  .image__text__container {
-    top: 35%;
-  }
-
   .image__text h1 {
     font-size: 1.25rem;
     text-transform: uppercase;

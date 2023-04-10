@@ -6,19 +6,20 @@ import styles from "./AboutSection.module.css";
 
 function AboutSection() {
   return (
-    <section id={styles.about__section}>
+    <section id="about__section">
       <div className={styles.about__image__container}>
         <Image
           src="/astrounaut.jpg"
-          alt="image"
+          alt="Astronaut floating in space"
           width="590"
           height="640"
           className={styles.about__image}
-        ></Image>
+          aria-label="Astronaut floating in space"
+        />
         <div className={styles.about__image__box}></div>
       </div>
       <div className={styles.about__text}>
-        <h4> About Company</h4>
+        <h2>About Company</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsa
           consequuntur impedit maxime exercitationem, assumenda quas quod
@@ -30,7 +31,7 @@ function AboutSection() {
           earum maiores saepe obcaecati recusandae ipsa commodi incidunt soluta
           magni.
         </p>
-        <button> See More </button>
+        <button aria-label="Read more about the company">Read More</button>
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import styles from "./ServiceSection.module.css";
 
 function ServiceSection() {
   return (
-    <section id={styles.services__section}>
+    <section id="services__section">
       <h2 className={styles.services__header}> Services </h2>
       <section className={styles.services}>
         <figure className={styles.first}>
@@ -14,6 +14,8 @@ function ServiceSection() {
             viewBox="0 0 150 160"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            aria-label="Service Name"
+            role="img"
           >
             <circle cx="76" cy="90" r="70" fill="#F0F1F1" />
             <circle cx="75" cy="75" r="75" fill="#F8F8FA" />
@@ -72,6 +74,8 @@ function ServiceSection() {
             viewBox="0 0 150 160"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            aria-label="Service Name"
+            role="img"
           >
             <circle cx="76" cy="90" r="70" fill="#F0F1F1" />
             <circle cx="75" cy="75" r="75" fill="#F8F8FA" />
@@ -134,6 +138,8 @@ function ServiceSection() {
             viewBox="0 0 150 160"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            aria-label="Service Name"
+            role="img"
           >
             <circle cx="76" cy="90" r="70" fill="#F0F1F1" />
             <circle cx="75" cy="75" r="75" fill="#F8F8FA" />

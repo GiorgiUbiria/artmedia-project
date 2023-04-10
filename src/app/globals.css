@@ -7,7 +7,9 @@
   --shadow: #eaecf0;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -67,6 +69,16 @@ h4 {
   color: #000000;
 }
 
+h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.125rem;
+  line-height: 2.563rem;
+  text-align: center;
+  color: #000000;
+}
+
 button {
   cursor: pointer;
 }
@@ -82,14 +94,79 @@ img {
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
+#image__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+
+#services__section {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 3.125rem;
+  gap: 2.5rem;
+}
+
+#news__section {
+  width: 100%;
+  background-color: #f8f8fa;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about__section {
+  width: 75%;
+  display: flex;
+  gap: 6rem;
+}
+
+@media only screen and (max-width: 1312px) {
+  #about__section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #image__section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
+  #services__section {
+    width: 95%;
+    gap: 2.5rem;
+  }
+
   h4 {
+    font-size: 1.875rem;
+  }
+
+  h2 {
     font-size: 1.875rem;
   }
 }
 
 @media only screen and (max-width: 666px) {
+  #services__section {
+    width: 95%;
+    gap: 2.5rem;
+  }
+  
   h4 {
+    font-size: 1.875rem;
+  }
+  h2 {
     font-size: 1.875rem;
   }
 }

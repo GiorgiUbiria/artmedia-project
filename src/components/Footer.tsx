@@ -18,7 +18,8 @@ const Footer = () => {
             viewBox="0 0 62 68"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-          >
+            aria-label="Company logo"
+          > 
             <path
               d="M13.4949 9.17676H58.8308V45.8765H9.17682V13.4948C9.17682 11.1111 11.1112 9.17676 13.4949 9.17676Z"
               fill="white"
@@ -48,7 +49,10 @@ const Footer = () => {
               fill="#2B3252"
             />
           </svg>
-          <h3 className={montserrat.className}> COMPANY NAME </h3>
+          <h3 className={montserrat.className} aria-label="Company name">
+            {" "}
+            COMPANY NAME{" "}
+          </h3>
         </div>
         <span className={montserrat.className} style={{ fontSize: "14px" }}>
           {" "}
@@ -61,6 +65,7 @@ const Footer = () => {
             href="/services"
             className={montserrat.className}
             style={{ color: "white" }}
+            title="Services"
           >
             Services
           </Link>
@@ -68,6 +73,7 @@ const Footer = () => {
             href="/projects"
             className={montserrat.className}
             style={{ color: "white" }}
+            title="Projects"
           >
             Projects
           </Link>
@@ -75,6 +81,7 @@ const Footer = () => {
             href="/about"
             className={montserrat.className}
             style={{ color: "white" }}
+            title="About"
           >
             About
           </Link>
@@ -82,17 +89,19 @@ const Footer = () => {
             href="/contact"
             className={montserrat.className}
             style={{ color: "white" }}
+            title="Contact"
           >
             Contact
           </Link>
         </nav>
-        <address className={styles.footer__socials}>
+        <address className={styles.footer__socials} style={{ width: "50%" }}>
           <svg
             width="85"
             height="35"
             viewBox="0 0 85 35"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            aria-label="Social media icons"
           >
             <path
               d="M9 1H25.01C29.43 1 33.01 4.58 33.01 9V25.01C33.01 29.43 29.43 33.01 25.01 33.01H9C4.58 33.01 1 29.43 1 25.01V9C1 4.58 4.58 1 9 1Z"
