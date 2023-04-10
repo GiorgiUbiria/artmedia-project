@@ -1,0 +1,103 @@
+#services__section {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 3.125rem;
+  gap: 2.5rem;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first,
+.second,
+.third {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-center;
+  align-items: center;
+  gap: 1.875rem;
+}
+
+.first > svg,
+.second > svg,
+.third > svg {
+  cursor: pointer;
+}
+
+.first > svg:hover,
+.second > svg:hover,
+.third > svg:hover {
+  scale: 1.1;
+  border-radius: 50%;
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
+    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
+    rgb(255, 85, 85) 0px 0px 0px 15px;
+  transition: 0.3s ease-in;
+}
+
+.services__header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3.063rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+@media only screen and (max-width: 1000px) {
+  #services__section {
+    width: 95%;
+    gap: 2.5rem;
+  }
+
+  .services {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .first,
+  .second,
+  .third {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-center;
+    align-items: center;
+    gap: 1.875rem;
+  }
+}
+
+@media only screen and (max-width: 666px) {
+  #services__section {
+    width: 95%;
+    gap: 2.5rem;
+  }
+
+  .services {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .first,
+  .second,
+  .third {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-center;
+    align-items: center;
+    gap: 1.875rem;
+  }
+}
+
+@media only screen and (max-width: 462px) {
+  .services {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

@@ -1,11 +1,13 @@
 import React from "react";
 
+import styles from "./ServiceSection.module.css";
+
 function ServiceSection() {
   return (
-    <section id="services__section">
-      <h1 className="services__header"> Services </h1>
-      <div className="services">
-        <div className="first">
+    <section id={styles.services__section}>
+      <h2 className={styles.services__header}> Services </h2>
+      <section className={styles.services}>
+        <figure className={styles.first}>
           <svg
             width="150"
             height="160"
@@ -62,8 +64,8 @@ function ServiceSection() {
             />
           </svg>
           <h4>Service Name</h4>
-        </div>
-        <div className="second">
+        </figure>
+        <figure className={styles.second}>
           <svg
             width="150"
             height="160"
@@ -124,8 +126,8 @@ function ServiceSection() {
             />
           </svg>
           <h4>Service Name</h4>
-        </div>
-        <div className="third">
+        </figure>
+        <figure className={styles.third}>
           <svg
             width="150"
             height="160"
@@ -169,8 +171,8 @@ function ServiceSection() {
             />
           </svg>
           <h4> Service Name </h4>
-        </div>
-      </div>
+        </figure>
+      </section>
     </section>
   );
 }

@@ -1,0 +1,280 @@
+#image__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+
+.image__container {
+  max-width: 100%;
+}
+
+.image {
+  max-width: 100%;
+  height: 48.75rem;
+  object-fit: cover;
+  position: relative;
+  top: 2.5rem;
+  filter: brightness(50%);
+}
+
+.image__box {
+  width: 98%;
+  height: 6.25rem;
+  background-color: var(--blue);
+  position: relative;
+  left: 1%;
+  z-index: -1;
+  bottom: 3.125rem;
+}
+
+.image__text__container {
+  width: 90%;
+  height: 48.75rem;
+  position: absolute;
+  top: 25.75rem;
+  left: 12.5%;
+}
+
+.image__text {
+  font-weight: 700;
+  color: var(--white);
+  width: 40%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.image__text h1 {
+  font-size: 3.875rem;
+  line-height: 76px;
+  text-transform: uppercase;
+}
+
+.image__text p {
+  font-size: 1rem;
+  line-height: 160%;
+  margin-top: 1.25rem;
+  opacity: 0.7;
+}
+
+.image__text button {
+  width: 20%;
+  height: 2.625rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 160%;
+  margin-top: 1.25rem;
+  color: var(--white);
+}
+
+@media only screen and (max-width: 1312px) {
+  #image__section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .image__container {
+    width: 100%;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    top: 2.5rem;
+  }
+
+  .image__box {
+    width: 98%;
+    left: 1%;
+    bottom: 3.125rem;
+  }
+
+  .image__text__container {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    left: 0;
+  }
+
+  .image__text {
+    width: 40%;
+    height: 100%;
+  }
+
+  .image__text h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .image__text p {
+    font-size: 1.5rem;
+  }
+
+  .image__text button {
+    width: 50%;
+    height: auto;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #image__section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .image__container {
+    width: 100%;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .image__box {
+    width: 98%;
+    height: 6.25rem;
+    left: 1%;
+    z-index: -1;
+    bottom: 3.25rem;
+  }
+
+  .image__text__container {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .image__text {
+    width: 90%;
+    height: 100%;
+  }
+
+  .image__text h1 {
+    font-size: 2.125rem;
+  }
+
+  .image__text p {
+    font-size: 1.125rem;
+  }
+
+  .image__text button {
+    font-size: 0.875rem;
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 666px) {
+  .image__text__container {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 40%;
+  }
+
+  .image__text h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  .image__text p {
+    font-size: 1rem;
+  }
+
+  .image__text button {
+    font-size: 0.875rem;
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 572px) {
+  .image__text__container {
+    top: 40%;
+  }
+
+  .image__text h1 {
+    font-size: 1.875rem;
+    text-transform: uppercase;
+  }
+
+  .image__text p {
+    font-size: 0.875rem;
+  }
+
+  .image__text button {
+    font-size: 0.725rem;
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 462px) {
+  .image__text h1 {
+    font-size: 1.725rem;
+    text-transform: uppercase;
+  }
+
+  .image__text p {
+    font-size: 0.725rem;
+  }
+
+  .image__text button {
+    font-size: 0.625rem;
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .image {
+    object-fit: cover;
+  }
+
+  .image__text__container {
+    top: 40%;
+  }
+
+  .image__text h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .image__text p {
+    font-size: 0.625rem;
+  }
+
+  .image__text button {
+    font-size: 0.5rem;
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 366px) {
+  .image__text__container {
+    top: 35%;
+  }
+
+  .image__text h1 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+  }
+
+  .image__text p {
+    font-size: 0.5rem;
+  }
+
+  .image__text button {
+    font-size: 0.325rem;
+    width: 25%;
+  }
+}

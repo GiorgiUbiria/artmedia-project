@@ -4,6 +4,8 @@ import React, { useState } from "react";
 
 import { cardCollection } from "@/app/api/cardCollection";
 
+import styles from "./NewsSection.module.css";
+
 function NewsSection() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -19,13 +21,13 @@ function NewsSection() {
     );
   };
   return (
-    <section id="news__section">
-      <div className="news__head">
-        <h1 className="news__header"> News</h1>
-        <div className="buttons">
+    <section id={styles.news__section}>
+      <header className={styles.news__head}>
+        <h3 className={styles.news__header}> News</h3>
+        <section className={styles.buttons}>
           <button
             disabled={currentIndex === 0}
-            className="left__button"
+            className={styles.left__button}
             onClick={() => {
               handlePrev();
             }}
@@ -45,7 +47,7 @@ function NewsSection() {
             </svg>
           </button>
           <button
-            className="right__buttton"
+            className={styles.right__buttton}
             onClick={() => {
               handleNext();
             }}
@@ -63,24 +65,24 @@ function NewsSection() {
               />
             </svg>
           </button>
-        </div>
-      </div>
-      <div className="card__box"></div>
-      <div className="card__carousel">
+        </section>
+      </header>
+      <div className={styles.card__box}></div>
+      <figure className={styles.card__carousel}>
         {cardCollection.slice(currentIndex).map((card) => (
           <div
-            className="card"
+            className={styles.card}
             key={card.id}
             style={{ backgroundImage: `url(${card.url})` }}
           >
-            <div className="card__text">
+            <div className={styles.card__text}>
               <h3> {card.name}</h3>
               <p>{card.date}</p>
               <button> See More </button>
             </div>
           </div>
         ))}
-      </div>
+      </figure>
     </section>
   );
 }

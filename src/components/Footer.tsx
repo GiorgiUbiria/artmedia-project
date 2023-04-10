@@ -1,13 +1,17 @@
-import { Montserrat } from "next/font/google";
-import Link from "next/link";
-const montserrat = Montserrat({ subsets: ["latin"] });
 import React from "react";
+
+import Link from "next/link";
+
+import styles from "./Footer.module.css";
+
+import { Montserrat } from "next/font/google";
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="copyright">
-        <div className="footer__logo">
+    <footer className={styles.footer}>
+      <article className={styles.copyright}>
+        <div className={styles.footer__logo}>
           <svg
             width="207"
             height="68"
@@ -50,9 +54,9 @@ const Footer = () => {
           {" "}
           &copy; 2023 All Rights Reserved{" "}
         </span>
-      </div>
-      <div className="footer__center">
-        <div className="footer__links">
+      </article>
+      <section className={styles.footer__center}>
+        <nav className={styles.footer__links}>
           <Link
             href="/services"
             className={montserrat.className}
@@ -81,8 +85,8 @@ const Footer = () => {
           >
             Contact
           </Link>
-        </div>
-        <div className="footer__socials">
+        </nav>
+        <address className={styles.footer__socials}>
           <svg
             width="85"
             height="35"
@@ -116,15 +120,15 @@ const Footer = () => {
               fill="white"
             />
           </svg>
-        </div>
-      </div>
-      <div className="form">
-        <form>
-          <div className="inputs">
+        </address>
+      </section>
+      <section className={styles.form}>
+        <form className={styles.main__form}>
+          <div className={styles.inputs}>
             <input
               type="text"
               placeholder="Name"
-              className={`input ${montserrat.className}`}
+              className={`${styles.input} ${montserrat.className}`}
               style={{
                 border: "1px solid rgba(255, 255, 255, 0.3)",
                 borderRadius: "8px",
@@ -140,7 +144,7 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Email"
-              className={`input ${montserrat.className}`}
+              className={`${styles.input} ${montserrat.className}`}
               style={{
                 border: "1px solid rgba(255, 255, 255, 0.3)",
                 borderRadius: "8px",
@@ -154,8 +158,9 @@ const Footer = () => {
               }}
             />
           </div>
-          <div className="textarea">
+          <div className={styles.textarea}>
             <textarea
+              className={styles.textarea__input}
               placeholder="Text"
               style={{
                 border: "1px solid rgba(255, 255, 255, 0.3)",
@@ -169,13 +174,13 @@ const Footer = () => {
                 opacity: "0.7",
               }}
             />
-            <button type="submit" className="form__button">
+            <button type="submit" className={styles.form__button}>
               {" "}
               Send{" "}
             </button>
           </div>
         </form>
-      </div>
+      </section>
     </footer>
   );
 };

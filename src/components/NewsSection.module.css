@@ -1,0 +1,233 @@
+#news__section {
+  width: 100%;
+  background-color: #f8f8fa;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news__header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3.063rem;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.news__head {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin-top: 3.25rem;
+}
+
+.news__head button {
+  background-color: #f8f8fa;
+  border: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.left__button svg path {
+  fill: #2b3252;
+}
+
+.left__button:disabled svg path {
+  fill: #ccc;
+}
+
+.card__carousel {
+  display: flex;
+  width: 100%;
+  position: relative;
+  left: 12.75%;
+}
+
+.card {
+  width: 23.25%;
+  height: 35rem;
+  margin-right: 1.875rem;
+  background: linear-gradient(
+    205.96deg,
+    rgba(67, 26, 26, 0) -7.14%,
+    #431a1a 121.86%
+  );
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.card__text {
+  width: 70%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  top: 50%;
+  left: 1.25rem;
+}
+
+.card h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.125rem;
+  line-height: 41px;
+  color: var(--white);
+}
+
+.card p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 17px;
+  color: var(--white);
+  opacity: 0.8;
+}
+
+.card button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 160%;
+  color: var(--white);
+  width: 40%;
+  height: 2.625rem;
+}
+
+.card__box {
+  width: 22%;
+  height: 100px;
+  background-color: #ef5555;
+  position: relative;
+  top: 35.625rem;
+  right: 25.5%;
+}
+
+@media only screen and (max-width: 1312px) {
+  .card__carousel {
+    display: flex;
+    width: 100%;
+    position: relative;
+    left: 12.75%;
+  }
+
+  .card {
+    width: 33%;
+  }
+
+  .card__text {
+    width: 70%;
+  }
+
+  .card h3 {
+    font-size: 2.25rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  .card__box {
+    width: 31.5%;
+    height: 100px;
+    background-color: #ef5555;
+    position: relative;
+    top: 35.625rem;
+    right: 20.75%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .card {
+    width: 37%;
+    height: 33rem;
+  }
+
+  .card__box {
+    width: 35.5%;
+    top: 33.625rem;
+    right: 18.725%;
+  }
+}
+
+@media only screen and (max-width: 666px) {
+  .card__carousel {
+    display: flex;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+    width: 100%;
+    position: relative;
+    left: 20%;
+  }
+
+  .card {
+    width: 60%;
+    height: 35rem;
+    margin-right: 575rem;
+  }
+
+  .card__box {
+    width: 58.5%;
+    height: 100px;
+    background-color: #ef5555;
+    position: relative;
+    top: 35.625rem;
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 462px) {
+  .card__carousel {
+    left: 15%;
+  }
+
+  .card {
+    width: 70%;
+    height: 30rem;
+  }
+
+  .card__box {
+    width: 68.5%;
+    height: 100px;
+    background-color: #ef5555;
+    position: relative;
+    top: 30.625rem;
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 336px) {
+  .news__header {
+    font-size: 1.875rem;
+  }
+
+  .card__carousel {
+    left: 5.75%;
+  }
+
+  .card {
+    width: 90%;
+    height: 20rem;
+  }
+
+  .card__box {
+    width: 88.5%;
+    height: 100px;
+    background-color: #ef5555;
+    position: relative;
+    top: 20.625rem;
+    right: -0.75%;
+  }
+}

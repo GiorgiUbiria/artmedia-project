@@ -2,8 +2,11 @@
 
 import React from "react";
 
-import { Montserrat } from "next/font/google";
 import Link from "next/link";
+
+import styles from "./NavigationBar.module.css";
+
+import { Montserrat } from "next/font/google";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 function NavigationBar() {
@@ -14,14 +17,14 @@ function NavigationBar() {
   }
 
   return (
-    <nav className="nav">
+    <section className={styles.nav}>
       <svg
         width="207"
         height="68"
         viewBox="0 0 208 68"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="icon"
+        className={styles.icon}
       >
         <path
           d="M13.4949 9.17684H58.8308V45.8766H9.17682V13.4949C9.17682 11.1112 11.1112 9.17684 13.4949 9.17684Z"
@@ -56,7 +59,7 @@ function NavigationBar() {
           fill="#2B3252"
         />
       </svg>
-      <div className={`links ${isOpen ? "visible__links" : ""}`}>
+      <nav className={`${styles.links} ${isOpen ? styles.visible__links : ""}`}>
         <Link href="/" className={montserrat.className}>
           Home
         </Link>
@@ -72,14 +75,14 @@ function NavigationBar() {
         <Link href="/contact" className={montserrat.className}>
           Contact
         </Link>
-      </div>
-      <div style={{}}>
+      </nav>
+      <section style={{}}>
         <input
           type="text"
           placeholder="search keyword..."
-          className={`search__input ${isOpen ? "visible__input" : ""} ${
-            montserrat.className
-          }`}
+          className={`${styles.search__input} ${
+            isOpen ? styles.visible__input : ""
+          } ${montserrat.className}`}
         />
         <svg
           width="16"
@@ -87,23 +90,23 @@ function NavigationBar() {
           viewBox="0 0 16 16"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="search__icon"
+          className={styles.search__icon}
         >
           <path
             d="M13.0006 6.49905C13.0006 7.93321 12.535 9.25802 11.7506 10.3329L15.707 14.2917C16.0977 14.6822 16.0977 15.3165 15.707 15.7071C15.3164 16.0976 14.682 16.0976 14.2913 15.7071L10.3349 11.7483C9.25983 12.5357 7.93476 12.9981 6.50032 12.9981C2.90952 12.9981 0 10.0891 0 6.49905C0 2.90895 2.90952 0 6.50032 0C10.0911 0 13.0006 2.90895 13.0006 6.49905ZM6.50032 10.9984C7.09129 10.9984 7.67649 10.882 8.22248 10.6559C8.76847 10.4298 9.26457 10.0984 9.68245 9.68056C10.1003 9.26276 10.4318 8.76676 10.658 8.22087C10.8841 7.67499 11.0005 7.08991 11.0005 6.49905C11.0005 5.90819 10.8841 5.32311 10.658 4.77722C10.4318 4.23134 10.1003 3.73534 9.68245 3.31753C9.26457 2.89973 8.76847 2.56831 8.22248 2.3422C7.67649 2.11609 7.09129 1.99971 6.50032 1.99971C5.90934 1.99971 5.32415 2.11609 4.77816 2.3422C4.23217 2.56831 3.73607 2.89973 3.31818 3.31753C2.9003 3.73534 2.56881 4.23134 2.34266 4.77722C2.1165 5.32311 2.0001 5.90819 2.0001 6.49905C2.0001 7.08991 2.1165 7.67499 2.34266 8.22087C2.56881 8.76676 2.9003 9.26276 3.31818 9.68056C3.73607 10.0984 4.23217 10.4298 4.77816 10.6559C5.32415 10.882 5.90934 10.9984 6.50032 10.9984Z"
             fill="#EF5555"
           />
         </svg>
-      </div>
-      <div
-        className={`container ${isOpen ? "change" : ""}`}
+      </section>
+      <section
+        className={`${styles.container} ${isOpen ? styles.change : ""}`}
         onClick={toggleMenu}
       >
-        <div className="bar1"></div>
-        <div className="bar2"></div>
-        <div className="bar3"></div>
-      </div>
-    </nav>
+        <div className={styles.bar1}></div>
+        <div className={styles.bar2}></div>
+        <div className={styles.bar3}></div>
+      </section>
+    </section>
   );
 }
 

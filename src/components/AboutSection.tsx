@@ -2,20 +2,22 @@ import React from "react";
 
 import Image from "next/image";
 
+import styles from "./AboutSection.module.css";
+
 function AboutSection() {
   return (
-    <section id="about__section">
-      <div className="about__image__container">
+    <section id={styles.about__section}>
+      <div className={styles.about__image__container}>
         <Image
           src="/astrounaut.jpg"
           alt="image"
           width="590"
           height="640"
-          className="about__image"
+          className={styles.about__image}
         ></Image>
-        <div className="about__image__box"></div>
+        <div className={styles.about__image__box}></div>
       </div>
-      <div className="about__text">
+      <div className={styles.about__text}>
         <h4> About Company</h4>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsa
